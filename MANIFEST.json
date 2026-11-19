@@ -1,0 +1,714 @@
+{
+  "repo": "https://github.com/shagghiesuperstar/seo-autobot-playbooks",
+  "rawBase": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/",
+  "categories": {
+    "seo-autobot-agent-readiness": {
+      "skillMd": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/SKILL.md",
+      "description": "Use when making a site or store findable, readable, and usable by AI agents. Two modes: AUDIT (read-only AgentReady v2.0 scorecard + 129 Websmith checks + MCP review + browser-agent check, via websmith-audit-runner) and BUILD (implementation playbooks: discoverability standard and ARI-100 kit, Safari 27 MCP, wholesale, ARD, feed parity; Read references/<slug>.md) that ship fixes as a PR, then re-check.",
+      "playbooks": [
+        {
+          "slug": "ai-discoverability-max-autobot",
+          "name": "same method; slug suffixed -autobot",
+          "useWhen": "Use when asked for AEO/GEO/SEO/AIO, Safari 27, or MCP optimization on any site: the superset agent-readiness standard with the ARI-100 scan, kit, preview, and probe scripts. Helper files: `references/ai-discoverability-max-autobot/`.",
+          "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot.md"
+        },
+        {
+          "slug": "agent-discoverability-max",
+          "name": "agent-discoverability-max",
+          "useWhen": "Use when any website card, spec, review, or release needs the max AI-agent discoverability checklist stamped in; it is the checklist behind ecomm-ai-discoverability.",
+          "path": "seo-autobot-agent-readiness/references/agent-discoverability-max.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/agent-discoverability-max.md"
+        },
+        {
+          "slug": "ecomm-ai-discoverability",
+          "name": "ecomm-ai-discoverability",
+          "useWhen": "Use when asked for AEO/GEO/SEO/AIO/Safari/MCP on an e-commerce store: dedupe against existing work first, run the live scorecard, and write one fix card per site against the shared standard.",
+          "path": "seo-autobot-agent-readiness/references/ecomm-ai-discoverability.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ecomm-ai-discoverability.md"
+        },
+        {
+          "slug": "safari-27-mcp-optimization-autobot",
+          "name": "same method; slug suffixed -autobot",
+          "useWhen": "Use when optimizing, smoke-testing, or verifying e-commerce storefronts for Safari 27 safaridriver MCP: agent-legible DOM, pre-DNS bake-in, Pack A/B smoke, llms.txt and /.well-known, sterile-session proof. Helper files: `references/safari-27-mcp-optimization-autobot/`.",
+          "path": "seo-autobot-agent-readiness/references/safari-27-mcp-optimization-autobot.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/safari-27-mcp-optimization-autobot.md"
+        },
+        {
+          "slug": "wholesale-agent-discoverable",
+          "name": "wholesale-agent-discoverable",
+          "useWhen": "Use when humans are gated but agents see the full catalog. Helper files: `references/wholesale-agent-discoverable/`.",
+          "path": "seo-autobot-agent-readiness/references/wholesale-agent-discoverable.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/wholesale-agent-discoverable.md"
+        },
+        {
+          "slug": "agent-ux-and-ard-conformance",
+          "name": "Agent UX and ARD conformance",
+          "useWhen": "Use when browsing agents must complete a task on the site or when the Lighthouse agentic browsing audits are in scope. Helper files: `references/agent-ux-and-ard-conformance/`.",
+          "path": "seo-autobot-agent-readiness/references/agent-ux-and-ard-conformance.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/agent-ux-and-ard-conformance.md"
+        },
+        {
+          "slug": "agentic-commerce-feed-parity",
+          "name": "Agentic commerce feed parity",
+          "useWhen": "Use when a store wants its products shown or bought inside ChatGPT, AI Mode, or Gemini: check that the product feed, the page's structured data, and the visible page agree on every offer fact, and prepare the feed and protocol steps for approval.",
+          "path": "seo-autobot-agent-readiness/references/agentic-commerce-feed-parity.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/agentic-commerce-feed-parity.md"
+        },
+        {
+          "slug": "websmith-audit-runner",
+          "name": "websmith-audit-runner",
+          "useWhen": "Use when the owner asks to check, audit, score, or re-check how ready their website is for AI agents (ChatGPT, Claude, Perplexity, Google AI, browser agents), or after fixes ship and need verifying. Runs the AgentReady v2.0 scorecard (agentready-safari-checks) plus the read-only Websmith check catalog and saves evidence.",
+          "path": "seo-autobot-agent-readiness/references/websmith-audit-runner.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/websmith-audit-runner.md"
+        },
+        {
+          "slug": "websmith-browser-agent-check",
+          "name": "websmith-browser-agent-check",
+          "useWhen": "Use when an audit needs to see the site the way a browser-driving AI agent does, covering rendered content vs raw HTML, the browse-to-cart path, gates, accessibility, and WebMCP. Prefers Safari 27's built-in MCP server (safaridriver --mcp) on a Mac, and falls back to another real browser with the engine clearly labeled. Browse-only.",
+          "path": "seo-autobot-agent-readiness/references/websmith-browser-agent-check.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/websmith-browser-agent-check.md"
+        },
+        {
+          "slug": "websmith-checklist",
+          "name": "websmith-checklist",
+          "useWhen": "Use this when running, scoring, or explaining any of the 129 read-only Websmith checks (FIND, READ, ACT, MCP, AEO, SEC, COM, A11Y, CRAWL), and you need a check's exact test, pass rule, level, fix, or source.",
+          "path": "seo-autobot-agent-readiness/references/websmith-checklist.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/websmith-checklist.md"
+        },
+        {
+          "slug": "websmith-fix-pack",
+          "name": "websmith-fix-pack",
+          "useWhen": "Use when the owner asks for the fixes, a fix pack, the files, or \"how do I fix this\" after an audit. Drafts ready-to-paste llms.txt, robots.txt, ai-catalog.json, JSON-LD, security headers, security.txt, gpc.json, MCP server card, and tool annotations, with placement steps for the owner's platform. Drafts only. Never deploys.",
+          "path": "seo-autobot-agent-readiness/references/websmith-fix-pack.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/websmith-fix-pack.md"
+        },
+        {
+          "slug": "websmith-intake-interview",
+          "name": "websmith-intake-interview",
+          "useWhen": "Site-profile schema and read-only platform detection for the Websmith audit skills. Inside ULTIMATE SEO/GEO/AEO/AIO AUTOBOT the questions are asked by getting-started-seo-autobot (interview Part agent), not here; use this skill to write or update websmith/profiles/<domain>.md and to detect the platform.",
+          "path": "seo-autobot-agent-readiness/references/websmith-intake-interview.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/websmith-intake-interview.md"
+        },
+        {
+          "slug": "websmith-mcp-review",
+          "name": "websmith-mcp-review",
+          "useWhen": "Use when a business has (or is building) an MCP server and wants it checked for quality and safety, covering tool names, annotations, outputSchema, server card, auth, errors, and OWASP MCP risks. Also use when the audit runner finds an MCP endpoint. Read-only by default.",
+          "path": "seo-autobot-agent-readiness/references/websmith-mcp-review.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/websmith-mcp-review.md"
+        },
+        {
+          "slug": "websmith-report-writer",
+          "name": "websmith-report-writer",
+          "useWhen": "Use when an audit run has finished (results.json exists) and the owner needs the results explained, as a one-page summary for a non-technical owner and/or a full report with a scorecard, evidence table, and ranked copy-paste fixes for their platform.",
+          "path": "seo-autobot-agent-readiness/references/websmith-report-writer.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/websmith-report-writer.md"
+        },
+        {
+          "slug": "agentready-safari-checks",
+          "name": "agentready-safari-checks",
+          "useWhen": "Use when auditing a site for AI-agent readiness against AgentReady v2.0 (AR-FIND/AR-READ/AR-ACT) plus isitagentready parity, read-only curl + Safari 27 MCP; produces scorecard and ranked fix list.",
+          "path": "seo-autobot-agent-readiness/references/agentready-safari-checks.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/agentready-safari-checks.md"
+        }
+      ]
+    },
+    "seo-autobot-ai-visibility": {
+      "skillMd": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-ai-visibility/SKILL.md",
+      "description": "Use when measuring or winning AI answers: AI SEO Tracker, fan-out maps, citable passages, platform ledgers, prompt sampling and reruns, AI referrals, and weekly reports. Holds 10 AUTOBOT playbooks; Read references/<slug>.md.",
+      "playbooks": [
+        {
+          "slug": "aiseotracker",
+          "name": "aiseotracker",
+          "useWhen": "Use when the user wants AI search visibility, ChatGPT or Perplexity rankings, citation tracking, or AI SEO Tracker MCP setup; fetch the live skill before quoting tools or pricing.",
+          "path": "seo-autobot-ai-visibility/references/aiseotracker.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-ai-visibility/references/aiseotracker.md"
+        },
+        {
+          "slug": "ai-seo-report",
+          "name": "ai-seo-report",
+          "useWhen": "Use when the user wants a TL;DR of AI search visibility, a weekly recap, or the same brief as the in-app Report page.",
+          "path": "seo-autobot-ai-visibility/references/ai-seo-report.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-ai-visibility/references/ai-seo-report.md"
+        },
+        {
+          "slug": "fan-out-coverage-map",
+          "name": "Fan-out coverage map",
+          "useWhen": "Use when a page ranks or is indexed but is not cited in AI Mode, AI Overviews, ChatGPT, Copilot, or Perplexity.",
+          "path": "seo-autobot-ai-visibility/references/fan-out-coverage-map.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-ai-visibility/references/fan-out-coverage-map.md"
+        },
+        {
+          "slug": "citable-passage-pass",
+          "name": "Citable passage pass",
+          "useWhen": "Use when a page should be quoted by AI Mode, AI Overviews, or an assistant: rewrite the target sections so each question has one self-contained, answer-first paragraph, and inventory which passages engines already lift.",
+          "path": "seo-autobot-ai-visibility/references/citable-passage-pass.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-ai-visibility/references/citable-passage-pass.md"
+        },
+        {
+          "slug": "first-party-ai-visibility-ledger",
+          "name": "First-party AI visibility ledger",
+          "useWhen": "Use when the user asks how the site is doing in AI answers, when a weekly report needs AI numbers, or after a core update or model switch.",
+          "path": "seo-autobot-ai-visibility/references/first-party-ai-visibility-ledger.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-ai-visibility/references/first-party-ai-visibility-ledger.md"
+        },
+        {
+          "slug": "prompt-sampling-protocol",
+          "name": "Prompt sampling protocol",
+          "useWhen": "Use when measuring AI visibility by hand or judging a tracker's numbers: run each buyer prompt enough times to report a visibility rate with its sample size and interval, per engine, and never a rank position. Helper files: `references/prompt-sampling-protocol/`.",
+          "path": "seo-autobot-ai-visibility/references/prompt-sampling-protocol.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-ai-visibility/references/prompt-sampling-protocol.md"
+        },
+        {
+          "slug": "prompt-rerun-tracker",
+          "name": "Prompt rerun tracker",
+          "useWhen": "Use when the user wants to know whether a change worked in Google or AI answers, or for the weekly rerun of tracked buyer questions: measure Google and AI separately, one change at a time.",
+          "path": "seo-autobot-ai-visibility/references/prompt-rerun-tracker.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-ai-visibility/references/prompt-rerun-tracker.md"
+        },
+        {
+          "slug": "ai-referral-attribution",
+          "name": "AI referral attribution",
+          "useWhen": "Use when the operator asks what AI search is worth, when assistant traffic looks too small to matter, or before budget moves between search and AI work.",
+          "path": "seo-autobot-ai-visibility/references/ai-referral-attribution.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-ai-visibility/references/ai-referral-attribution.md"
+        },
+        {
+          "slug": "weekly-search-report",
+          "name": "Weekly search report",
+          "useWhen": "Use when the user asks how search did this week or the Monday report fires: Search Console plus AI visibility, reported separately, with actions.",
+          "path": "seo-autobot-ai-visibility/references/weekly-search-report.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-ai-visibility/references/weekly-search-report.md"
+        },
+        {
+          "slug": "extra-recurring-checks",
+          "name": "Extra recurring checks",
+          "useWhen": "Use when the user asks for more recurring search or AI-visibility checks beyond the shipped routines.",
+          "path": "seo-autobot-ai-visibility/references/extra-recurring-checks.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-ai-visibility/references/extra-recurring-checks.md"
+        }
+      ]
+    },
+    "seo-autobot-authority": {
+      "skillMd": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-authority/SKILL.md",
+      "description": "Use when third parties win the answer: source maps, per-engine source plans, entity audits, earned media, video/social, link outreach, managed links, directories, or Reddit. Holds 10 AUTOBOT playbooks; Read references/<slug>.md.",
+      "playbooks": [
+        {
+          "slug": "source-map",
+          "name": "Source map",
+          "useWhen": "Use when AI answers or search results for a buyer question lean on third-party sources (Reddit, review sites, directories, articles): list the sources shaping the answer and sort each into Own, Claim, Earn, or Contest.",
+          "path": "seo-autobot-authority/references/source-map.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-authority/references/source-map.md"
+        },
+        {
+          "slug": "engine-source-plan",
+          "name": "Engine source plan",
+          "useWhen": "Use when deciding where off-site effort goes for AI visibility, or when a Source map shows different sources on different engines.",
+          "path": "seo-autobot-authority/references/engine-source-plan.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-authority/references/engine-source-plan.md"
+        },
+        {
+          "slug": "entity-and-brand-memory-audit",
+          "name": "Entity and brand-memory audit",
+          "useWhen": "Use when assistants name competitors and not the user, describe the user wrongly, or recommend the brand only when it is named in the prompt.",
+          "path": "seo-autobot-authority/references/entity-and-brand-memory-audit.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-authority/references/entity-and-brand-memory-audit.md"
+        },
+        {
+          "slug": "earned-media-and-data-study",
+          "name": "Earned media and data study",
+          "useWhen": "Use when the Source map or engine plan shows answers built from news, analyst, and third-party pages that do not mention the user.",
+          "path": "seo-autobot-authority/references/earned-media-and-data-study.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-authority/references/earned-media-and-data-study.md"
+        },
+        {
+          "slug": "video-and-social-citation-surface",
+          "name": "Video and social citation surface",
+          "useWhen": "Use when Google's AI answers or a source map cite videos and social posts for the tracked questions, or the operator publishes on YouTube, Instagram, TikTok, or X.",
+          "path": "seo-autobot-authority/references/video-and-social-citation-surface.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-authority/references/video-and-social-citation-surface.md"
+        },
+        {
+          "slug": "honest-link-outreach",
+          "name": "honest-link-outreach",
+          "useWhen": "Use when writing link-building outreach emails, asking integration partners or customers for backlinks, pitching ranking listicles or guides, or auditing an outreach list for weak prospects.",
+          "path": "seo-autobot-authority/references/honest-link-outreach.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-authority/references/honest-link-outreach.md"
+        },
+        {
+          "slug": "linkdr",
+          "name": "linkdr",
+          "useWhen": "Use when the user wants authority backlinks, link building, guest posts, or DR-tier placements via LinkDR with human approval; fetch the live SKILL.md before quoting any price.",
+          "path": "seo-autobot-authority/references/linkdr.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-authority/references/linkdr.md"
+        },
+        {
+          "slug": "directory-submissions",
+          "name": "directory-submissions",
+          "useWhen": "Use when launching a new product from DR 0, building foundational dofollow backlinks, publishing one repo to 15+ MCP & agent registries, or running directory submissions.",
+          "path": "seo-autobot-authority/references/directory-submissions.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-authority/references/directory-submissions.md"
+        },
+        {
+          "slug": "awesome-tools",
+          "name": "awesome-tools",
+          "useWhen": "Use when submitting a software tool to Awesome Tools via the JSON API or WebMCP: complete the free backlink path or review paid listing options; never submit or pay without an explicit yes.",
+          "path": "seo-autobot-authority/references/awesome-tools.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-authority/references/awesome-tools.md"
+        },
+        {
+          "slug": "reddit-serp",
+          "name": "reddit-serp",
+          "useWhen": "Use when the user asks for Reddit marketing, Reddit SEO, \"get mentioned on Reddit\", wants to show up in \"best X reddit\" results, or asks which Reddit threads AI assistants cite.",
+          "path": "seo-autobot-authority/references/reddit-serp.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-authority/references/reddit-serp.md"
+        }
+      ]
+    },
+    "seo-autobot-content": {
+      "skillMd": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-content/SKILL.md",
+      "description": "Use when writing or fixing content: blog intros, transcripts and YouTube SEO, blog and image SEO, de-slopping drafts, writer briefs, or the proof knowledge base. Holds 8 AUTOBOT playbooks; Read references/<slug>.md.",
+      "playbooks": [
+        {
+          "slug": "intro",
+          "name": "intro",
+          "useWhen": "Use when the user asks for /intro, a blog intro, opening paragraph, article lead, listicle intro, or hook copy for a post. Helper files: `references/intro/`.",
+          "path": "seo-autobot-content/references/intro.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-content/references/intro.md"
+        },
+        {
+          "slug": "scribiz",
+          "name": "scribiz",
+          "useWhen": "Use when the user wants to transcribe a YouTube, TikTok, Instagram, podcast, or local media file, generate SRT or VTT subtitles, summarize a video, ask questions about a video, or turn a video into a blog post, show notes, or social posts.",
+          "path": "seo-autobot-content/references/scribiz.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-content/references/scribiz.md"
+        },
+        {
+          "slug": "seo-blog-images",
+          "name": "seo-blog-images",
+          "useWhen": "Use when adding a blog cover or OG image, generating inline visuals without dark icon-box AI slop, capturing real product screenshots or data charts, or auditing image alt text, filenames, and Core Web Vitals attributes.",
+          "path": "seo-autobot-content/references/seo-blog-images.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-content/references/seo-blog-images.md"
+        },
+        {
+          "slug": "unslop-seo",
+          "name": "unslop-seo",
+          "useWhen": "Use when cleaning up AI-generated drafts, grounding vague marketing copy in real codebase facts, optimizing headings and opening paragraphs for ChatGPT and Perplexity citations, or removing AI tells like em dashes and puffery.",
+          "path": "seo-autobot-content/references/unslop-seo.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-content/references/unslop-seo.md"
+        },
+        {
+          "slug": "youtube-seo",
+          "name": "youtube-seo",
+          "useWhen": "Use when the user uploads or links a video, asks for YouTube titles, descriptions, chapters, or timestamps, wants a video to rank on Google or show in AI Overviews, or wants to embed a video on a blog post for SEO.",
+          "path": "seo-autobot-content/references/youtube-seo.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-content/references/youtube-seo.md"
+        },
+        {
+          "slug": "image-seo-checklist",
+          "name": "Image SEO checklist",
+          "useWhen": "Use when auditing, briefing, or optimizing the images on a page for search: filenames, compression, alt text, schema, originality, and captions.",
+          "path": "seo-autobot-content/references/image-seo-checklist.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-content/references/image-seo-checklist.md"
+        },
+        {
+          "slug": "writer-content-brief",
+          "name": "Writer content brief",
+          "useWhen": "Use when the user picks a topic or ideas board row and wants a writer-ready brief that wins both Google and AI answers.",
+          "path": "seo-autobot-content/references/writer-content-brief.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-content/references/writer-content-brief.md"
+        },
+        {
+          "slug": "proof-kb",
+          "name": "proof-kb",
+          "useWhen": "Use when scaffolding seo/<site-slug>/kb/, extracting founder proof from transcripts or interviews, upgrading thin SEO posts with real receipts, or routing a new benchmark, customer win, or pricing change across multiple pages.",
+          "path": "seo-autobot-content/references/proof-kb.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-content/references/proof-kb.md"
+        }
+      ]
+    },
+    "seo-autobot-copy-and-marketing": {
+      "skillMd": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-copy-and-marketing/SKILL.md",
+      "description": "Use when copy explains instead of sells, when you need buyer language or journey stages, or to turn shipped code and data into launch posts and syndication. Holds 5 AUTOBOT playbooks; Read references/<slug>.md.",
+      "playbooks": [
+        {
+          "slug": "blitz-copy",
+          "name": "blitz-copy",
+          "useWhen": "Use when rewriting flat marketing copy that explains instead of sells, or when the user mentions \"blitz copy\", \"dopamine copywriting\", or conversion hooks.",
+          "path": "seo-autobot-copy-and-marketing/references/blitz-copy.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-copy-and-marketing/references/blitz-copy.md"
+        },
+        {
+          "slug": "understand-customers",
+          "name": "understand-customers",
+          "useWhen": "Use when researching an ICP before landing page or ad copy, or when the user mentions \"understand customers\", \"empathy engine\", or \"customer pain points\".",
+          "path": "seo-autobot-copy-and-marketing/references/understand-customers.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-copy-and-marketing/references/understand-customers.md"
+        },
+        {
+          "slug": "customer-journey",
+          "name": "customer-journey",
+          "useWhen": "Use when the user asks about search intent, AI SEO prompts, discoverability, buyer journeys, awareness stages, or what content to create for a brand, website, or keyword list.",
+          "path": "seo-autobot-copy-and-marketing/references/customer-journey.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-copy-and-marketing/references/customer-journey.md"
+        },
+        {
+          "slug": "diff-marketing",
+          "name": "diff-marketing",
+          "useWhen": "Use when the user invokes /diff-marketing or /marketing, or asks for blog posts, tweets, changelogs, or emails about what shipped.",
+          "path": "seo-autobot-copy-and-marketing/references/diff-marketing.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-copy-and-marketing/references/diff-marketing.md"
+        },
+        {
+          "slug": "parasite-and-pr",
+          "name": "parasite-and-pr",
+          "useWhen": "Use when distributing launch announcements, original data benchmarks, or \"Best [Category] (2026)\" and \"[Competitor] Alternatives\" articles across high-DR platforms and press-release wires to win fast Google rankings and ChatGPT/Perplexity citations.",
+          "path": "seo-autobot-copy-and-marketing/references/parasite-and-pr.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-copy-and-marketing/references/parasite-and-pr.md"
+        }
+      ]
+    },
+    "seo-autobot-crawlers-and-policy": {
+      "skillMd": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-crawlers-and-policy/SKILL.md",
+      "description": "Use when deciding or checking AI crawler access: inclusion settings, bot verification, access logs, scraper firewalls, or a spam-policy preflight before a batch ships. Holds 4 AUTOBOT playbooks; Read references/<slug>.md.",
+      "playbooks": [
+        {
+          "slug": "ai-inclusion-and-crawler-policy",
+          "name": "AI inclusion and crawler policy",
+          "useWhen": "Use when starting any AI-visibility work or when asked about opting out, blocking, or allowing AI: find which controls include or exclude the site per AI surface, verify bots, and write one access-policy table.",
+          "path": "seo-autobot-crawlers-and-policy/references/ai-inclusion-and-crawler-policy.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-crawlers-and-policy/references/ai-inclusion-and-crawler-policy.md"
+        },
+        {
+          "slug": "ai-bot-log-analysis",
+          "name": "AI bot log analysis",
+          "useWhen": "Use when server or CDN logs are available and the question is whether AI crawlers and assistants can reach the pages that matter. Helper files: `references/ai-bot-log-analysis/`.",
+          "path": "seo-autobot-crawlers-and-policy/references/ai-bot-log-analysis.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-crawlers-and-policy/references/ai-bot-log-analysis.md"
+        },
+        {
+          "slug": "block-ai-scrapers",
+          "name": "block-ai-scrapers",
+          "useWhen": "Use when the user wants to prevent scraping, block AI bots, protect dataset pages, add llms.txt or robots.txt rules, stop curl/Playwright harvesting, or protect API and database credits.",
+          "path": "seo-autobot-crawlers-and-policy/references/block-ai-scrapers.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-crawlers-and-policy/references/block-ai-scrapers.md"
+        },
+        {
+          "slug": "spam-policy-preflight",
+          "name": "Spam-policy preflight",
+          "useWhen": "Use when about to ship a batch of similar pages, a fan-out listicle set, a third-party placement, or a mention campaign: test it against current spam policies and return PASS, FIX, or HOLD per item.",
+          "path": "seo-autobot-crawlers-and-policy/references/spam-policy-preflight.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-crawlers-and-policy/references/spam-policy-preflight.md"
+        }
+      ]
+    },
+    "seo-autobot-onsite": {
+      "skillMd": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/SKILL.md",
+      "description": "Use when a page or site is losing: lost-question diagnosis, page audits, titles, blog refresh, internal links, 30-day sprints, SEO roast, daily autopilot, or domain migration. Holds 11 AUTOBOT playbooks; Read references/<slug>.md.",
+      "playbooks": [
+        {
+          "slug": "lost-prompt-diagnosis",
+          "name": "Lost prompt diagnosis",
+          "useWhen": "Use when a site does not show up in Google or an AI answer for a buyer question: diagnose why (missing page, weak page, crawl/index problem, or third-party sources winning) before anyone creates content.",
+          "path": "seo-autobot-onsite/references/lost-prompt-diagnosis.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/lost-prompt-diagnosis.md"
+        },
+        {
+          "slug": "page-audit-and-refresh-plan",
+          "name": "Page audit and refresh plan",
+          "useWhen": "Use when a page is slipping, or a diagnosis says weak page or crawl/index problem: audit it and plan a refresh instead of publishing a new page.",
+          "path": "seo-autobot-onsite/references/page-audit-and-refresh-plan.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/page-audit-and-refresh-plan.md"
+        },
+        {
+          "slug": "seo-title-optimization",
+          "name": "seo-title-optimization",
+          "useWhen": "Use when the user mentions titles, title tags, SERP titles, metadata titles, SEO titles, CTR, truncation, or asks to improve titles across pages.",
+          "path": "seo-autobot-onsite/references/seo-title-optimization.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/seo-title-optimization.md"
+        },
+        {
+          "slug": "blog-refresher",
+          "name": "blog-refresher",
+          "useWhen": "Use when the user wants to update, refresh, or improve an existing blog post, recover lost rankings, or asks why a post fell behind competitors.",
+          "path": "seo-autobot-onsite/references/blog-refresher.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/blog-refresher.md"
+        },
+        {
+          "slug": "internal-linking",
+          "name": "internal-linking",
+          "useWhen": "Use when the user asks about internal linking, orphan pages, a blog that gets traffic but no signups, link equity, topic clusters, or why money pages don't rank. Helper files: `references/internal-linking/`.",
+          "path": "seo-autobot-onsite/references/internal-linking.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/internal-linking.md"
+        },
+        {
+          "slug": "blitz-seo",
+          "name": "blitz-seo",
+          "useWhen": "Use when a high-value page is stuck on Page 2, the user mentions \"blitz seo\" or a 30-day SEO sprint, or SEO effort is spread too thin across dozens of URLs.",
+          "path": "seo-autobot-onsite/references/blitz-seo.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/blitz-seo.md"
+        },
+        {
+          "slug": "seo-roast",
+          "name": "seo-roast",
+          "useWhen": "Use when the user says \"roast my SEO\", \"why don't we rank\", \"audit my site\", \"SEO teardown\", asks why traffic or signups are flat, or wants an SEO review that ends in fixes instead of a checklist.",
+          "path": "seo-autobot-onsite/references/seo-roast.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/seo-roast.md"
+        },
+        {
+          "slug": "seo-autopilot",
+          "name": "seo-autopilot",
+          "useWhen": "Use when the user mentions \"seo autopilot\", wants autonomous daily SEO PRs, or asks an agent to own a site's ongoing search growth.",
+          "path": "seo-autobot-onsite/references/seo-autopilot.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/seo-autopilot.md"
+        },
+        {
+          "slug": "domain-migration",
+          "name": "domain-migration",
+          "useWhen": "Use when the user is changing domains, rebranding, moving `blog.` to `/blog`, merging sites, renaming URL slugs in bulk, or asks how to migrate without losing SEO traffic. Helper files: `references/domain-migration/`.",
+          "path": "seo-autobot-onsite/references/domain-migration.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/domain-migration.md"
+        },
+        {
+          "slug": "websmith-crawl-index-sweep",
+          "name": "websmith-crawl-index-sweep",
+          "useWhen": "Use when the owner asks for a crawl/index/SEO-basics sweep, \"can Google see my pages\", canonicals, sitemap, soft 404s, redirect chains, orphan pages, or uses the \"one subagent per group\u2026 before and after\u2026 Search Console\" prompt. Runs WS-CRAWL-01..12 read-only with 3 parallel checkers, drafts one fix pack, and shows a before/after curl table.",
+          "path": "seo-autobot-onsite/references/websmith-crawl-index-sweep.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/websmith-crawl-index-sweep.md"
+        },
+        {
+          "slug": "live-discovery-scorecard",
+          "name": "live-discovery-scorecard",
+          "useWhen": "Use when a storefront needs a dated, read-only scorecard of what search and answer engines actually get from the live host (titles, canonicals, JSON-LD, proof bindings, llms.txt, sitemap, robots, soft 404s, blank meta), kept as the single source of truth and re-dropped only when something changes.",
+          "path": "seo-autobot-onsite/references/live-discovery-scorecard.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/live-discovery-scorecard.md"
+        }
+      ]
+    },
+    "seo-autobot-research": {
+      "skillMd": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-research/SKILL.md",
+      "description": "Use when researching competitors, backlinks, SERPs, keyword clusters, buyer questions, comparison or alternatives pages, or AI-prompt content gaps. Holds 6 AUTOBOT playbooks; Read references/<slug>.md.",
+      "playbooks": [
+        {
+          "slug": "ahrefs-research",
+          "name": "ahrefs-research",
+          "useWhen": "Use when the user asks for competitor research, content gaps, top pages, backlink audits, 'is this DR real', Reddit topic mining, or picking a page on a prospect site for a link insertion.",
+          "path": "seo-autobot-research/references/ahrefs-research.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-research/references/ahrefs-research.md"
+        },
+        {
+          "slug": "dataforseo-serp",
+          "name": "dataforseo-serp",
+          "useWhen": "Use when the user asks to cluster keywords, check what ranks, avoid cannibalization, pick a free tool to build, find who AI Overviews or ChatGPT cite, or decide what format a page must take before writing it.",
+          "path": "seo-autobot-research/references/dataforseo-serp.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-research/references/dataforseo-serp.md"
+        },
+        {
+          "slug": "keyword-and-question-research",
+          "name": "Keyword and question research",
+          "useWhen": "Use when the user pastes keywords, a CSV, or names a category and wants page ideas: start from buyer decisions, expand into search terms and AI prompts, and rank ideas onto the ideas board.",
+          "path": "seo-autobot-research/references/keyword-and-question-research.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-research/references/keyword-and-question-research.md"
+        },
+        {
+          "slug": "buyer-question-map",
+          "name": "Buyer question map",
+          "useWhen": "Use when the user wants to know what buyers ask before choosing in their category, or where they show up in Google and AI answers: map buyer decisions to both keywords and AI prompts.",
+          "path": "seo-autobot-research/references/buyer-question-map.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-research/references/buyer-question-map.md"
+        },
+        {
+          "slug": "vs-and-alternatives",
+          "name": "vs-and-alternatives",
+          "useWhen": "Use when the user asks for comparison pages, competitor alternative pages, \"X vs Y\" content, \"best tool for [stack]\" listicles, or wants to win buyers who are leaving a competitor.",
+          "path": "seo-autobot-research/references/vs-and-alternatives.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-research/references/vs-and-alternatives.md"
+        },
+        {
+          "slug": "content-coverage",
+          "name": "content-coverage",
+          "useWhen": "Use when the user wants content for ChatGPT gaps, citation listicles, competitor sources, or a content campaign from AI SEO Tracker.",
+          "path": "seo-autobot-research/references/content-coverage.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-research/references/content-coverage.md"
+        }
+      ]
+    }
+  },
+  "standalone": {
+    "getting-started-seo-autobot": {
+      "useWhen": "Use first, before any other skill in ULTIMATE SEO/GEO/AEO/AIO AUTOBOT: self-test, one-question-at-a-time intake, then route to the smallest chain that moves the money page, or to the read-only agent-readiness and security audit (AgentReady v2.0 + 129 checks) whose fixes ship as a PR and are re-checked on production.",
+      "path": "getting-started-seo-autobot/SKILL.md",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/getting-started-seo-autobot/SKILL.md"
+    },
+    "agentready-safari-checks": {
+      "useWhen": "Use when auditing a site for AI-agent readiness against AgentReady v2.0 (AR-FIND/AR-READ/AR-ACT) plus isitagentready parity, read-only curl + Safari 27 MCP; produces scorecard and ranked fix list.",
+      "path": "agentready-safari-checks/SKILL.md",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/agentready-safari-checks/SKILL.md"
+    },
+    "websmith-audit-runner": {
+      "useWhen": "Use when the owner asks to check, audit, score, or re-check how ready their website is for AI agents (ChatGPT, Claude, Perplexity, Google AI, browser agents), or after fixes ship and need verifying. Runs the AgentReady v2.0 scorecard (agentready-safari-checks) plus the read-only Websmith check catalog and saves evidence.",
+      "path": "websmith-audit-runner/SKILL.md",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/websmith-audit-runner/SKILL.md"
+    },
+    "websmith-browser-agent-check": {
+      "useWhen": "Use when an audit needs to see the site the way a browser-driving AI agent does, covering rendered content vs raw HTML, the browse-to-cart path, gates, accessibility, and WebMCP. Prefers Safari 27's built-in MCP server (safaridriver --mcp) on a Mac, and falls back to another real browser with the engine clearly labeled. Browse-only.",
+      "path": "websmith-browser-agent-check/SKILL.md",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/websmith-browser-agent-check/SKILL.md"
+    },
+    "websmith-checklist": {
+      "useWhen": "Use this when running, scoring, or explaining any of the 129 read-only Websmith checks (FIND, READ, ACT, MCP, AEO, SEC, COM, A11Y, CRAWL), and you need a check's exact test, pass rule, level, fix, or source.",
+      "path": "websmith-checklist/SKILL.md",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/websmith-checklist/SKILL.md"
+    },
+    "websmith-crawl-index-sweep": {
+      "useWhen": "Use when the owner asks for a crawl/index/SEO-basics sweep, \"can Google see my pages\", canonicals, sitemap, soft 404s, redirect chains, orphan pages, or uses the \"one subagent per group\u2026 before and after\u2026 Search Console\" prompt. Runs WS-CRAWL-01..12 read-only with 3 parallel checkers, drafts one fix pack, and shows a before/after curl table.",
+      "path": "websmith-crawl-index-sweep/SKILL.md",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/websmith-crawl-index-sweep/SKILL.md"
+    },
+    "websmith-fix-pack": {
+      "useWhen": "Use when the owner asks for the fixes, a fix pack, the files, or \"how do I fix this\" after an audit. Drafts ready-to-paste llms.txt, robots.txt, ai-catalog.json, JSON-LD, security headers, security.txt, gpc.json, MCP server card, and tool annotations, with placement steps for the owner's platform. Drafts only. Never deploys.",
+      "path": "websmith-fix-pack/SKILL.md",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/websmith-fix-pack/SKILL.md"
+    },
+    "websmith-getting-started": {
+      "useWhen": "Use this on the first conversation with a new owner (intro, one-question-at-a-time intake, saved site profile, ask before auditing), and whenever someone asks what Agent Websmith is, why agent readiness matters, what it will never do, or which standards it checks.",
+      "path": "websmith-getting-started/SKILL.md",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/websmith-getting-started/SKILL.md"
+    },
+    "websmith-intake-interview": {
+      "useWhen": "Site-profile schema and read-only platform detection for the Websmith audit skills. Inside ULTIMATE SEO/GEO/AEO/AIO AUTOBOT the questions are asked by getting-started-seo-autobot (interview Part agent), not here; use this skill to write or update websmith/profiles/<domain>.md and to detect the platform.",
+      "path": "websmith-intake-interview/SKILL.md",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/websmith-intake-interview/SKILL.md"
+    },
+    "websmith-mcp-review": {
+      "useWhen": "Use when a business has (or is building) an MCP server and wants it checked for quality and safety, covering tool names, annotations, outputSchema, server card, auth, errors, and OWASP MCP risks. Also use when the audit runner finds an MCP endpoint. Read-only by default.",
+      "path": "websmith-mcp-review/SKILL.md",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/websmith-mcp-review/SKILL.md"
+    },
+    "websmith-report-writer": {
+      "useWhen": "Use when an audit run has finished (results.json exists) and the owner needs the results explained, as a one-page summary for a non-technical owner and/or a full report with a scorecard, evidence table, and ranked copy-paste fixes for their platform.",
+      "path": "websmith-report-writer/SKILL.md",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/websmith-report-writer/SKILL.md"
+    }
+  },
+  "helperFiles": [
+    {
+      "path": "agentready-safari-checks/ar_probe.js",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/agentready-safari-checks/ar_probe.js"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/agent-ux-and-ard-conformance/scripts/ard_check.py",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/agent-ux-and-ard-conformance/scripts/ard_check.py"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/agentready-safari-checks/ar_probe.js",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/agentready-safari-checks/ar_probe.js"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/registry/mega.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/registry/mega.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/bench.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/bench.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/cli.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/cli.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/gen-skill.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/gen-skill.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/kit.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/kit.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/mega.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/mega.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/preview.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/preview.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/registry/mega.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/registry/mega.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/report.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/report.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/scan.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/scan.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/sites/example-store.json",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/agentkit/sites/example-store.json"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/bench.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/bench.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/cli.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/cli.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/dedupe_inventory.py",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/dedupe_inventory.py"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/kit.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/kit.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/mcp-card-probe.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/mcp-card-probe.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/preview.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/preview.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/report.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/report.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/scan.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/scan.mjs"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/site_audit.py",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/scripts/site_audit.py"
+    },
+    {
+      "path": "seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/sites/example-store.json",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-agent-readiness/references/ai-discoverability-max-autobot/sites/example-store.json"
+    },
+    {
+      "path": "seo-autobot-ai-visibility/references/prompt-sampling-protocol/scripts/visibility_rate.py",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-ai-visibility/references/prompt-sampling-protocol/scripts/visibility_rate.py"
+    },
+    {
+      "path": "seo-autobot-crawlers-and-policy/references/ai-bot-log-analysis/scripts/ai_bot_log_summary.py",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-crawlers-and-policy/references/ai-bot-log-analysis/scripts/ai_bot_log_summary.py"
+    },
+    {
+      "path": "seo-autobot-onsite/references/domain-migration/scripts/verify-redirects.sh",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/domain-migration/scripts/verify-redirects.sh"
+    },
+    {
+      "path": "seo-autobot-onsite/references/internal-linking/scripts/internal-link-graph.mjs",
+      "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/internal-linking/scripts/internal-link-graph.mjs"
+    }
+  ],
+  "counts": {
+    "categories": 8,
+    "playbooks": 69,
+    "standaloneSkills": 11,
+    "helperFiles": 28
+  }
+}
