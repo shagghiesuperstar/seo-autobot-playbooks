@@ -1,0 +1,45 @@
+# Dedupe decisions
+
+> Part of ULTIMATE SEO/GEO/AEO/AIO AUTOBOT. Generated from the Search Ops export (`dedupe`). Skill names are mapped to staged slugs.
+
+
+## Collapsed
+- **onboarding**: the master getting-started skill + the incoming getting-started skill → getting-started-seo-autobot (same job, one entry point: merged self-test, interview, connections, routing, starter menu, routines.)
+- **weekly report routine**: weekly answer-engine scan + weekly search report → weekly search report (both report weekly movement; the surviving routine covers search and answers together, reported separately.)
+- **connectors**: capability connectors + marketplace plugins + account-only tools → one connectors[] array (one list an operator reads once, with kind telling them what to do (capability, plugin, account-or-export).)
+- **frameworks**: bundle frameworks block → methods[] (one method catalog: the four diagnosis buckets, source sorting, separate measurement, and the rerun loop are methods, not a separate section.)
+- **answer-engine map**: buyer question map + answer engine question map → Buyer question map (same rows, one skill; the search-and-assistant pair, the what-they-have column, and the image caveat now live together.)
+- **same-named generations**: five skills present in two generations → one authored union each (each generation dropped instructions the other kept, so each pair was merged rather than picked.)
+- **catch-up layer**: 2026 platform reporting, policy, protocol, and research changes → fourteen additive skills plus methods, workflows, routing, and routines (added beside the existing library rather than rewritten into it, so every prior instruction survives and precedence rules settle the overlaps.)
+
+## Precedence
+- `customer-journey` (Read `../seo-autobot-copy-and-marketing/references/customer-journey.md`) vs `buyer-question-map` (Read `../seo-autobot-research/references/buyer-question-map.md`): Question map first when you need tracked rows; journey only for stage framing and prompt vocabulary.
+- `dataforseo-serp` (Read `../seo-autobot-research/references/dataforseo-serp.md`) vs `keyword-and-question-research` (Read `../seo-autobot-research/references/keyword-and-question-research.md`): Research skill when there is no live SERP account; live clustering when there is.
+- `blog-refresher` (Read `../seo-autobot-onsite/references/blog-refresher.md`) vs `page-audit-and-refresh-plan` (Read `../seo-autobot-onsite/references/page-audit-and-refresh-plan.md`): Audit for a page a diagnosis already named; refresher for a post that is slipping and needs a SERP gap read.
+- `seo-roast` (Read `../seo-autobot-onsite/references/seo-roast.md`) vs `lost-prompt-diagnosis` (Read `../seo-autobot-onsite/references/lost-prompt-diagnosis.md`): Roast is site-wide and revenue-ordered; diagnosis is one lost question at a time.
+- `ai-seo-report` (Read `../seo-autobot-ai-visibility/references/ai-seo-report.md`) vs `weekly-search-report` (Read `../seo-autobot-ai-visibility/references/weekly-search-report.md`): Report brief when a visibility tracker is the source; weekly report when search-console data leads.
+- `aiseotracker` (Read `../seo-autobot-ai-visibility/references/aiseotracker.md`) vs `prompt-rerun-tracker` (Read `../seo-autobot-ai-visibility/references/prompt-rerun-tracker.md`): Tracker for the paid scan setup; rerun tracker when measuring by hand against a fixed prompt set.
+- `proof-kb` (Read `../seo-autobot-content/references/proof-kb.md`) vs `writer-content-brief` (Read `../seo-autobot-content/references/writer-content-brief.md`): Brief consumes proof cards; run the proof base first or the brief ships consensus-only.
+- `ai-discoverability-max-autobot` (Read `../seo-autobot-agent-readiness/references/ai-discoverability-max-autobot.md`) vs `block-ai-scrapers` (Read `../seo-autobot-crawlers-and-policy/references/block-ai-scrapers.md`): Readiness first (publish the surface), firewall second (keep the scrapers off the costly routes).
+- `seo-blog-images` (Read `../seo-autobot-content/references/seo-blog-images.md`) vs `image-seo-checklist` (Read `../seo-autobot-content/references/image-seo-checklist.md`): Checklist is the audit and brief standard; the blog-images skill is the production path that satisfies it.
+- `prompt-rerun-tracker` (Read `../seo-autobot-ai-visibility/references/prompt-rerun-tracker.md`) vs `prompt-sampling-protocol` (Read `../seo-autobot-ai-visibility/references/prompt-sampling-protocol.md`): Rerun tracker owns the fixed set, the change log, and the verdict; the sampling protocol sets how many runs, the conditions, and the interval. A single-run rerun is labeled a sample of one.
+- `aiseotracker` (Read `../seo-autobot-ai-visibility/references/aiseotracker.md`) vs `first-party-ai-visibility-ledger` (Read `../seo-autobot-ai-visibility/references/first-party-ai-visibility-ledger.md`): Ledger first: the platforms' own numbers lead. A paid tracker is a labeled second opinion and is never added to them.
+- `content-coverage` (Read `../seo-autobot-research/references/content-coverage.md`) vs `fan-out-coverage-map` (Read `../seo-autobot-ai-visibility/references/fan-out-coverage-map.md`): Fan-out map first; coverage writes a new page only for a row marked absent-no-page that also clears diagnosis and preflight.
+- `unslop-seo` (Read `../seo-autobot-content/references/unslop-seo.md`) vs `citable-passage-pass` (Read `../seo-autobot-ai-visibility/references/citable-passage-pass.md`): Slop pass cleans voice and structure across the page; the passage pass then shapes the one answer paragraph per question. Run in that order.
+- `source-map` (Read `../seo-autobot-authority/references/source-map.md`) vs `engine-source-plan` (Read `../seo-autobot-authority/references/engine-source-plan.md`): Source map lists and sorts sources per lost prompt; the engine plan groups them per engine and dates the mix.
+- `vs-and-alternatives` (Read `../seo-autobot-research/references/vs-and-alternatives.md`) vs `spam-policy-preflight` (Read `../seo-autobot-crawlers-and-policy/references/spam-policy-preflight.md`): Any persona or comparison batch passes preflight before the routes ship; a HOLD overrides the batch cap.
+- `parasite-and-pr` (Read `../seo-autobot-copy-and-marketing/references/parasite-and-pr.md`) vs `earned-media-and-data-study` (Read `../seo-autobot-authority/references/earned-media-and-data-study.md`): Earned first. Syndication and wire bundles run only after preflight confirms the target pages are indexable and nothing paid is presented as editorial.
+- `block-ai-scrapers` (Read `../seo-autobot-crawlers-and-policy/references/block-ai-scrapers.md`) vs `ai-inclusion-and-crawler-policy` (Read `../seo-autobot-crawlers-and-policy/references/ai-inclusion-and-crawler-policy.md`): Policy decides which bot classes are allowed; the firewall enforces it on costly routes and must not catch the search, user-triggered, or signed-agent classes the policy allows.
+- `ai-discoverability-max-autobot` (Read `../seo-autobot-agent-readiness/references/ai-discoverability-max-autobot.md`) vs `agent-ux-and-ard-conformance` (Read `../seo-autobot-agent-readiness/references/agent-ux-and-ard-conformance.md`): Discoverability publishes the files, structured data, endpoint, and edge access; the conformance skill owns task walks in three views and the manifest audit findings.
+- `ecomm-ai-discoverability` (Read `../seo-autobot-agent-readiness/references/ecomm-ai-discoverability.md`) vs `agentic-commerce-feed-parity` (Read `../seo-autobot-agent-readiness/references/agentic-commerce-feed-parity.md`): Parity first: a storefront whose feed, markup, and page disagree is not ready for the agent layer.
+- `youtube-seo` (Read `../seo-autobot-content/references/youtube-seo.md`) vs `video-and-social-citation-surface` (Read `../seo-autobot-authority/references/video-and-social-citation-surface.md`): The surface skill decides which questions need a video and audits the result; youtube-seo produces the titles, chapters, and embed.
+- `seo-autopilot` (Read `../seo-autobot-onsite/references/seo-autopilot.md`) vs `ai-bot-log-analysis` (Read `../seo-autobot-crawlers-and-policy/references/ai-bot-log-analysis.md`): Autopilot's health check reads the site; log analysis reads what bots actually fetched. When logs exist, they outrank a simulated crawl.
+- `weekly-search-report` (Read `../seo-autobot-ai-visibility/references/weekly-search-report.md`) vs `ai-referral-attribution` (Read `../seo-autobot-ai-visibility/references/ai-referral-attribution.md`): The weekly report quotes only the provable layer; the attribution skill holds the claimed and dark layers and their limits.
+
+## Dropped from the export (intentionally absent)
+- external citation lists and their verification notes
+- product-version suffixes on skill names
+- the incoming bundle's superseded-version note and its import runbook
+- owner and ops-runner names, org and repo paths, branch schemes, and ticket-tracker commands
+- a pasted social-post citation and its note
+- external reference lists
