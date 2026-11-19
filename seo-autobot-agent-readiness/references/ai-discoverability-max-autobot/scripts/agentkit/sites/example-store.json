@@ -1,0 +1,18 @@
+{
+  "host": "https://<your-site>.example",
+  "name": "<Your Store>",
+  "legalName": "<Your Store LLC>",
+  "description": "One plain sentence saying what the site sells or does, and for whom.",
+  "pages": [
+    {"path": "/", "title": "Home", "note": "start here"},
+    {"path": "/faq", "title": "Frequently asked questions"},
+    {"path": "/shipping", "title": "Shipping and lead times"},
+    {"path": "/returns", "title": "Returns"}
+  ],
+  "facts": ["One verifiable fact an agent should know, copied from a live page."],
+  "rules": ["One rule an agent must follow, e.g. do not state a price that is not on the page."],
+  "commerce": true,
+  "currency": "USD",
+  "country": "US",
+  "email": "hello@<your-site>.example"
+}
