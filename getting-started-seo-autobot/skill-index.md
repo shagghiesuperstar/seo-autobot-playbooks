@@ -1,4 +1,4 @@
-# Skill / playbook index (70 methods with playbook bodies; 9 packaged skills)
+# Skill / playbook index (71 methods with playbook bodies; 9 packaged skills)
 
 > Part of ULTIMATE SEO/GEO/AEO/AIO AUTOBOT. Generated from the Search Ops export (`skills`). Skill names are mapped to staged slugs.
 
@@ -75,5 +75,6 @@
 | agentready-safari-checks | `agentready-safari-checks` | `skills/seo-autobot-agent-readiness/references/agentready-safari-checks.md` | merged | Audit / discovery | evidence-backed artifact from this method | Run agentready-safari-checks |
 | websmith-crawl-index-sweep | `websmith-crawl-index-sweep` | `skills/seo-autobot-onsite/references/websmith-crawl-index-sweep.md` | merged | Audit / discovery | evidence-backed artifact from this method | Run websmith-crawl-index-sweep |
 | live-discovery-scorecard | `live-discovery-scorecard` | `skills/seo-autobot-onsite/references/live-discovery-scorecard.md` | merged | Audit / discovery | evidence-backed artifact from this method | Run live-discovery-scorecard |
+| six-dimension-site-audit | `six-dimension-site-audit` | `skills/seo-autobot-onsite/references/six-dimension-site-audit.md` | merged | Audit / discovery | scored six-dimension report, monthly diff, baseline snapshots, and evidence URLs | Run a scored six-dimension site audit of this production URL |
 
 Safari portable aliases (`safari-27-field-lessons`, `safari-27-mcp-optimization`, `safari-mcp-ecomm-smoke`, `safari-mcp-evidence-gate`, `safari-mcp-pre-dns-bake-in`, `safari-mcp-sustain`) resolve to `seo-autobot-agent-readiness/references/safari-27-mcp-optimization-autobot.md`. `ai-discoverability-max` resolves to `ai-discoverability-max-autobot`. Desk slugs resolve to their richer equivalent without a second task. First contact always belongs to `getting-started-seo-autobot`; the Desk and Websmith onboarding references are wording/schema sources only.

@@ -404,7 +404,7 @@
     },
     "seo-autobot-onsite": {
       "skillMd": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/SKILL.md",
-      "description": "Use when a page or site is losing: lost-question diagnosis, page audits, titles, blog refresh, internal links, 30-day sprints, SEO roast, daily autopilot, or domain migration. Holds 11 AUTOBOT playbooks; Read references/<slug>.md.",
+      "description": "Use when a page or site is losing: lost-question diagnosis, page audits, titles, blog refresh, internal links, 30-day sprints, SEO roast, daily autopilot, domain migration, or a scored six-dimension site audit. Holds 12 AUTOBOT playbooks; Read references/<slug>.md.",
       "playbooks": [
         {
           "slug": "lost-prompt-diagnosis",
@@ -482,6 +482,13 @@
           "useWhen": "Use when a storefront needs a dated, read-only scorecard of what search and answer engines actually get from the live host (titles, canonicals, JSON-LD, proof bindings, llms.txt, sitemap, robots, soft 404s, blank meta), kept as the single source of truth and re-dropped only when something changes.",
           "path": "seo-autobot-onsite/references/live-discovery-scorecard.md",
           "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/live-discovery-scorecard.md"
+        },
+        {
+          "slug": "six-dimension-site-audit",
+          "name": "six-dimension-site-audit",
+          "useWhen": "Use when the operator wants a scored, evidence-backed audit of one production site across SEO technical, content, speed, accessibility, CRO, and schema, with P0/P1/P2 findings, measured-only 0-100 dimension scores, and a monthly diff. Never invent metrics.",
+          "path": "seo-autobot-onsite/references/six-dimension-site-audit.md",
+          "rawUrl": "https://raw.githubusercontent.com/shagghiesuperstar/seo-autobot-playbooks/main/seo-autobot-onsite/references/six-dimension-site-audit.md"
         }
       ]
     },
@@ -707,7 +714,7 @@
   ],
   "counts": {
     "categories": 8,
-    "playbooks": 69,
+    "playbooks": 70,
     "standaloneSkills": 11,
     "helperFiles": 28
   }

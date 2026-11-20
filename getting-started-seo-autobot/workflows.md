@@ -164,3 +164,13 @@
 2. Compare last scorecard; annotate changed cells only. Route crawl defects to `websmith-crawl-index-sweep`, claim-proof gaps to `proof-kb`, and agent-file gaps to `ai-discoverability-max-autobot`.
 3. Write one hitlist with evidence, expected status, owner, blast radius, and pass-when condition. Re-drop only on a real delta; otherwise one dated log line.
 **Gate:** L0 measure only until a separate written yes unlocks a next rung. No branch replay, paid trial, routine activation, ticket creation, outreach, publish, merge, or client-site change.
+
+
+## W18. Scored six-dimension site audit (`six-dimension-site-audit-run`)
+**When:** The operator wants a scored, evidence-backed audit of one production site across SEO technical, content, speed, accessibility, CRO, and schema, or routing lands on R29.
+
+1. `six-dimension-site-audit` (Read `../seo-autobot-onsite/references/six-dimension-site-audit.md`): confirm the production URL, crawl scope, priorities, and data sources (ask q39–q41 if unknown); crawl public pages only at the audit-mode rate limit; score measured checks only → output: `seo/<site-slug>/audits/YYYY-MM-DD.md`, `seo/<site-slug>/audits/latest.md`, baseline snapshots, evidence under `seo/<site-slug>/audits/evidence/YYYY-MM-DD/`
+2. If a previous report or baseline exists, write `seo/<site-slug>/audits/YYYY-MM-DD-diff.md` with sections fixed / still open / new / regressions. No fix claimed without evidence.
+3. Offer the next method, do not run it: crawl or index fatals to `seo-roast` or `websmith-crawl-index-sweep`; agent-readiness gaps to W9; a named weak page to `page-audit-and-refresh-plan`. Offer RT18 and RT19 in plain text, paused, only after a timezone is saved.
+
+**Gate:** Read-only throughout (getting-started section 9). GET and HEAD only, at most 1 request per second per host. No live-site change, no PR, no outside PageSpeed or schema-validator URL fetch without a per-domain yes. Never invent a Lighthouse, traffic, ranking, or conversion number. Unmeasured checks are listed and excluded from scores. These dimension scores are never averaged with AgentReady or Websmith scores.
