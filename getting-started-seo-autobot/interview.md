@@ -13,6 +13,7 @@
 7. Only ask a question that would change what you run next — otherwise decide and go.
 8. Part `agent` is asked only when agents, assistants buying or booking, MCP, or security are in scope (q6 says "invisible to AI assistants", q26 says yes, the routing lands on W9, or the operator asks for an audit). Ask q30 and q32 first; the rest only when they change the audit. Never re-ask what another part already answered: q1 (site), q17 (who changes the site), q26 (feed), q29 (crawler stance), and q10/q18 (delivery, cadence) are reused as-is.
 9. Never collect a password, API key, or card number in chat. A key the audit needs is set as an environment variable by the operator.
+10. Part `scored-audit` (q39 to q42) is asked only when the operator wants a scored six-dimension site audit, routing lands on R29 or W18, or they ask for PageSpeed, accessibility, CRO, or schema scored as dimensions. Never re-ask q1 (site URL) or a timezone already saved. Do not collect a PageSpeed Insights API key in chat; if they have one, they set it as an environment variable.
 
 ## Part `surface`: Surface and stake
 | id | Ask | Could change | Maps to | Stores in |
@@ -77,6 +78,14 @@
 | q34 | An outside scan (AgentPass, the one we recommend) sends requests to your site from outside. Should I never start one, ask each time (default), or is AgentPass fine when I ask? Any budget for paid tools (default $0)? | Whether an AgentPass scan may run for this domain, or the operator pastes the free report instead. | `websmith-audit-runner` | websmith/profiles/<domain>.md (`third_party_scanners`, `budget_usd`) |
 
 Platform is never asked first: detect it read-only from the homepage source (`websmith-intake-interview`, "Detect the platform") and confirm it with the operator.
+
+## Part `scored-audit`: Six-dimension site audit (asked only when a scored site audit is in scope)
+| id | Ask | Could change | Maps to | Stores in |
+|---|---|---|---|---|
+| q39 | Anything to include or skip in the crawl? Default is the homepage, nav-linked top pages, and one example of each public template, cap about 30 pages, public pages only. | The URL list and the page cap for the scored audit. | `six-dimension-site-audit` (Read `../seo-autobot-onsite/references/six-dimension-site-audit.md`) | seo/<site-slug>/context.md (`crawl_scope`, `page_cap`) |
+| q40 | What matters most right now: rankings / organic traffic, conversions, page speed, accessibility compliance, or rich results / schema? You can pick more than one. | Which P0s the report leads with; every dimension is still scored. | `six-dimension-site-audit` (Read `../seo-autobot-onsite/references/six-dimension-site-audit.md`) | seo/<site-slug>/context.md (`audit_priorities`) |
+| q41 | Any data sources you want used for this audit: Google Search Console, PageSpeed Insights (a key, if you have one, is an environment variable — never paste it here), Semrush, analytics, or public crawl only? | Which speed, traffic, and competitive checks can be measured; the rest are unmeasured. Offer a connector only after a yes. | `six-dimension-site-audit` (Read `../seo-autobot-onsite/references/six-dimension-site-audit.md`) | seo/<site-slug>/context.md (`audit_data_sources`) |
+| q42 | Turn on the monthly six-dimension re-audit and the weekly audit self-improve routines? Yes both, monthly only, or not yet. Ask this in plain text, not as a widget. | Which paused routine proposals may be enabled after a timezone is already saved. | `six-dimension-site-audit` (Read `../seo-autobot-onsite/references/six-dimension-site-audit.md`) | offer only; enable a routine only on an explicit yes |
 
 ## Self-test (onboarding.selfTest)
 | Step | Do | Pass | Fail |

@@ -44,7 +44,7 @@ Setting up or switching sites never changes a client site: site folders live onl
 4. **Audit (read-only mode, section 9).** `websmith-audit-runner` runs the AgentReady v2.0 scorecard (`agentready-safari-checks`), then the 129 Websmith checks (`websmith-checklist`, CRAWL via `websmith-crawl-index-sweep`), plus `websmith-mcp-review` when an MCP server exists and `websmith-browser-agent-check` for the rendered and buy-path checks. `websmith-report-writer` turns it into SUMMARY and REPORT, blockers first. Nothing on the site changes, and no repo is needed for this step.
 5. **Fix.** `websmith-fix-pack` drafts the files. Then, if there is a repo and the operator says yes, the drafts become one reviewable PR through the normal PR flow (fatals first, one PR, never auto-merged). With no repo, the fix pack is handed over with placement steps per platform.
 6. **Re-check on production.** Once the operator says "it's live", `websmith-audit-runner` re-check mode re-runs the failed checks plus every MUST and shows before and after. W9 is not done until those numbers move.
-7. **Keep it honest.** Offer the weekly agent-readiness re-test routine (RT16) beside the search routines. All routines start paused.
+7. **Keep it honest.** Offer the weekly agent-readiness re-test routine (RT16) beside the search routines, and after a six-dimension audit offer the monthly re-audit (RT18) and the weekly audit self-improve (RT19). All routines start paused.
 
 An operator who only wants SEO never sees steps 4 to 6. An operator who arrives saying "check my site for AI agents" starts at step 4 right after the URL and the two agent questions, with no repo required. The audit's findings feed the search chains too: CRAWL and AEO failures land in `seo/<site-slug>/backlog.md` as dated items.
 
@@ -78,6 +78,7 @@ One question at a time, as a conversation, each skippable. Ask only what changes
 11. Anything off limits: a competitor they will not name, a claim they cannot make, a community they will not post in.
 12. *(Agent scope only.)* What should an AI assistant or browser agent be able to do on the site, in their words: find products, compare prices, check stock, book a time? Then anything hidden or limited on purpose (login-gated prices, an age gate, a blocked region). Those choices are scored EXCEPTION, never FAIL.
 13. *(Agent scope only.)* The rest of Part `agent` in `interview.md`: regulated claims and the approved wording, what already exists (MCP server, API, llms.txt, feed), and whether an outside scan may run (AgentPass, default: ask each time).
+14. *(Scored six-dimension audit only.)* Crawl scope (default: homepage, nav-linked top pages, one per public template, cap about 30), what matters most (rankings, conversions, speed, accessibility, schema — this weights P0s, it does not skip dimensions), and data sources including PageSpeed Insights if they want it (a key is an environment variable, never pasted). Then, in plain text, whether to turn on the monthly re-audit and weekly self-improve routines.
 
 Save each answer as it lands, one fact per line: site, what they sell, audience, buying decision, competitors, owned and claimable profiles, communities, seed topics, keyword source, conversion event, brief destination, timezone, report day and hour, off limits. Agent answers also go to the site profile `websmith/profiles/<domain>.md` (schema in `websmith-intake-interview`), so the audit never asks twice.
 
@@ -96,6 +97,7 @@ Say what is already connected. Offer the rest in one multiselect and send cards 
 | Invisible, page exists | diagnosis, page audit, refresh | name the bucket before writing a word |
 | Losing to third parties | source map, outreach | sort into own, claim, earn, contest |
 | Nobody knows why | the teardown | fatals only, one PR |
+| Scored site audit; PageSpeed, accessibility, CRO, or schema as dimensions | the six-dimension audit | confirm URL, scope, priorities, and sources; measured scores only |
 | Domain change | the migration chain | URL and backlink union first |
 | Scrapers burning credits | the firewall | name the costly routes |
 | Agents can't find, read, or buy; "AgentReady score"; MCP review; security headers | W9 agent-readiness: audit, report, fix pack, PR, re-check | read-only audit, AgentReady scorecard first |
@@ -107,11 +109,11 @@ Two chains at most on the first day. Breadth is what produces audit PDFs.
 
 ## 5. Starter menu
 
-Offer six things that finish right now: map the buyer questions in my space, find out why I am not showing up for one, build the ideas board from the site, write a brief for a topic they name, audit a page that is slipping, check whether AI agents can find, read, and use the site (read-only, no repo needed).
+Offer seven things that finish right now: map the buyer questions in my space, find out why I am not showing up for one, build the ideas board from the site, write a brief for a topic they name, audit a page that is slipping, check whether AI agents can find, read, and use the site (read-only, no repo needed), run a scored six-dimension audit of the site (SEO, content, speed, accessibility, CRO, schema).
 
 ## 6. Routines
 
-Offer in plain words: a weekly ideas digest, a weekly report with search and answer-engine numbers shown separately, a weekday watch that stays quiet unless something is worth a page, a weekly rerun of the tracked questions, and (after a first audit) a weekly read-only agent-readiness re-test that reports what broke, worst first. Turn on only what they say yes to, and add one line that more checks exist on request.
+Offer in plain words: a weekly ideas digest, a weekly report with search and answer-engine numbers shown separately, a weekday watch that stays quiet unless something is worth a page, a weekly rerun of the tracked questions, (after a first agent-readiness audit) a weekly read-only agent-readiness re-test that reports what broke, worst first, and (after a first six-dimension audit) a monthly scored re-audit plus a weekly quiet self-improve note. Turn on only what they say yes to, and add one line that more checks exist on request.
 
 ## 7. First run
 
@@ -123,7 +125,7 @@ Pick the chain's first skill, read its whole body, run it to a shipped artifact 
 - Cosmetic work before a crawl or indexation blocker is wasted effort.
 - The proof base is a prerequisite: without it, articles are consensus-only and lose to anyone with receipts.
 - Twenty questions in one message is the failure mode. One answer at a time is the method.
-- Audit and build are different modes. Never write, commit, or open a PR during an audit run; findings become changes only in W9's PR step, after a yes.
+- Audit and build are different modes. Never write, commit, or open a PR during an audit run; AgentReady findings become changes only in W9's PR step, after a yes. A six-dimension audit (W18) is also read-only and never opens a PR; its findings are handed over.
 - A check you could not run is UNTESTED with the reason, never a guessed PASS. Never say a browser or Safari pass happened when it did not.
 
 ## 8. Catch-up layer (added 2026-11-17)
@@ -162,7 +164,7 @@ Paths are relative to this skill's directory.
 
 ## 9. Audit mode (the Agent Websmith method, folded in)
 
-Used by W9 step 1 and its re-check, by RT16, and whenever the operator asks for an agent-readiness, MCP, or security check. While in audit mode:
+Used by W9 step 1 and its re-check, by RT16, by the scored six-dimension audit (W18, RT18), and whenever the operator asks for an agent-readiness, MCP, security, or scored six-dimension check. While in audit mode:
 
 - **Read-only.** GET and HEAD only, at most 1 request per second per host, timeouts on every call, no load tests. No logins, purchases, add-to-cart POSTs, form submits, coupon tries, or account creation. A signed-in pass happens only when the operator has set it up for that site and the password comes from the environment, never from chat.
 - **MCP:** `initialize` and `tools/list` (plus the other list calls) only. Never `tools/call` unless the operator approves one specific call to a read-only tool.
@@ -172,23 +174,23 @@ Used by W9 step 1 and its re-check, by RT16, and whenever the operator asks for 
 - **No writes.** Evidence goes to `websmith/runs/<domain>/<YYYY-MM-DD-HHMM>/` and the report beside it. Nothing is committed, deployed, or sent. Regulated sites use only the approved claims, word for word.
 
 ## 10. Full reference files (in this folder)
-- `routing.md`: all 28 routing rows (R19 to R22 are the audit rows; R23 to R26 are the strategic rows) (operator says → chain → first move).
-- `workflows.md`: all 17 workflow chains with outputs and gates (W9 is the agent-readiness audit → fix → PR → re-check chain).
+- `routing.md`: all 29 routing rows (R19 to R22 are the agent-readiness audit rows; R29 is the scored six-dimension audit; R23 to R26 are the strategic rows) (operator says → chain → first move).
+- `workflows.md`: all 18 workflow chains with outputs and gates (W9 is the agent-readiness audit → fix → PR → re-check chain; W18 is the scored six-dimension audit).
 - `connectors.md`: all 24 connectors, what needs them, and what happens without them.
-- `interview.md`: all 6 interview parts (38 questions; Part `agent` q30 to q34 asked only when in scope; strategic q35 to q38 in Part `surface`), the 9 rules, and the 5 self-test steps.
-- `methods.md`: all 69 catalog methods. `output-contract.md`: `seo/` artifact layout, 15 approval gates, writing rules.
-- `routines.md`: 17 routine proposals (RT16 weekly agent-readiness re-test; RT17 live discovery delta), all paused until the operator says yes. `memories.md`: 8 seed profile facts.
+- `interview.md`: all 7 interview parts (42 questions; Part `agent` q30 to q34 asked only when in scope; strategic q35 to q38 in Part `surface`; Part `scored-audit` q39 to q42 asked only when a scored six-dimension audit is in scope), the 10 rules, and the 5 self-test steps.
+- `methods.md`: all 70 catalog methods. `output-contract.md`: `seo/` artifact layout, 15 approval gates, writing rules.
+- `routines.md`: 19 routine proposals (RT16 weekly agent-readiness re-test; RT17 live discovery delta; RT18 monthly six-dimension re-audit; RT19 weekly audit self-improve), all paused until the operator says yes. `memories.md`: 8 seed profile facts.
 - `guardrails.md`, `server-notes.md`, `dedupe.md` (collapsed, precedence, dropped), `export-meta.md`, `skill-index.md` (export name → slug).
 - `references/dated-platform-facts.md`: the dated platform facts register (re-read each line live before quoting).
 - `resources/`: supporting files no skill references directly.
 - Audit playbooks (internal references, loaded via their category; never require separate external skills): `websmith-audit-runner`, `agentready-safari-checks` (with `ar_probe.js`), `websmith-checklist`, `websmith-crawl-index-sweep`, `websmith-mcp-review`, `websmith-browser-agent-check`, `websmith-report-writer`, `websmith-fix-pack`, and `websmith-intake-interview` (site-profile schema and platform detection only; its questions are asked here in Part `agent`). `websmith-getting-started` is not used by this bot.
-- Playbooks: 69 reference playbooks live in 8 category skills as `references/<slug>.md` (each category's SKILL.md indexes its playbooks; `skill-index.md` maps every slug to its file): `seo-autobot-content`, `seo-autobot-copy-and-marketing`, `seo-autobot-research`, `seo-autobot-onsite`, `seo-autobot-authority`, `seo-autobot-ai-visibility`, `seo-autobot-crawlers-and-policy`, `seo-autobot-agent-readiness`. From here, a playbook is at `../<category-skill>/references/<slug>.md`. If a Skill load fails, Read that file directly through the skill's own directory.
+- Playbooks: 70 reference playbooks live in 8 category skills as `references/<slug>.md` (each category's SKILL.md indexes its playbooks; `skill-index.md` maps every slug to its file): `seo-autobot-content`, `seo-autobot-copy-and-marketing`, `seo-autobot-research`, `seo-autobot-onsite`, `seo-autobot-authority`, `seo-autobot-ai-visibility`, `seo-autobot-crawlers-and-policy`, `seo-autobot-agent-readiness`. From here, a playbook is at `../<category-skill>/references/<slug>.md`. If a Skill load fails, Read that file directly through the skill's own directory.
 
 
 ## Consolidated routing / portability (2026-11-18)
-There is one entry skill and 8 category skills: 70 playbook bodies including this entry, 69 catalog methods, 17 workflows, 17 paused routine proposals, and 24 connector capability/account definitions (not installed connections). The 9 audit playbooks live inside these category folders, not outside the template. To run a named audit method, read its category's `references/<slug>.md`; `skill-index.md` maps every slug. Websmith and Desk onboarding reference files preserve their wording, but never restart or override the master 38-question per-site interview.
+There is one entry skill and 8 category skills: 71 playbook bodies including this entry, 70 catalog methods, 18 workflows, 19 paused routine proposals, and 24 connector capability/account definitions (not installed connections). The 9 Websmith audit playbooks, plus `live-discovery-scorecard` and `six-dimension-site-audit`, live inside these category folders, not outside the template. To run a named audit method, read its category's `references/<slug>.md`; `skill-index.md` maps every slug. Websmith and Desk onboarding reference files preserve their wording, but never restart or override the master 42-question per-site interview.
 
-New routes R27–R28 cover live discovery truth and Safari/pre-cutover/sustain. Full workflows W16–W17 cover those hand-offs. The strategy order remains R24 (gate) > R26 (never-see list) > R25 (footprint) > R23 (offline maturity); the R19 read-only audit never overrides the gate or exclusion list. The two-chain day-one limit and one-deep-chain-per-site rule apply throughout.
+New routes R27–R29 cover live discovery truth, Safari/pre-cutover/sustain, and the scored six-dimension audit. Full workflows W16–W18 cover those hand-offs. The strategy order remains R24 (gate) > R26 (never-see list) > R25 (footprint) > R23 (offline maturity); the R19 read-only audit never overrides the gate or exclusion list. The two-chain day-one limit and one-deep-chain-per-site rule apply throughout.
 
 Read `websmith-onboarding-reference.md` or `desk-onboarding-reference.md` only for missing phrasing. Read `merge-ledger.md` for provenance and aliases. No source bot is deleted, retired, or implicitly authorized by this staged merge.
 

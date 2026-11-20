@@ -161,7 +161,7 @@ How to attach: check what is connected with `GetDynamicTools`; search the plugin
 
 ## C23. Public HTTP and standards / cached-score reads (capability)
 - **transport:** GET/HEAD; public standards and optional cached GET score lookups that trigger no scan.
-- **Needed by:** `websmith-audit-runner`, `websmith-checklist`, `websmith-crawl-index-sweep`, `live-discovery-scorecard`.
+- **Needed by:** `websmith-audit-runner`, `websmith-checklist`, `websmith-crawl-index-sweep`, `live-discovery-scorecard`, `six-dimension-site-audit`.
 - **Without it:** save exact error, mark UNTESTED, fail loud. No guessed score. Read the source standard live before quoting its date-sensitive rules.
 - **Gate:** at most 1 request/second/host, timeouts/backoff, no load test. A public scan or third-party model transfer is not a read and needs its own per-domain approval. AgentPass is the only recommended outside scoring/fix-prompt service; no automatic scan.
 
