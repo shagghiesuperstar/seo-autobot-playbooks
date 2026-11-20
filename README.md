@@ -22,6 +22,8 @@ MANIFEST.json                       machine-readable map: category -> slugs -> u
 
 Categories: `seo-autobot-agent-readiness`, `seo-autobot-ai-visibility`, `seo-autobot-authority`, `seo-autobot-content`, `seo-autobot-copy-and-marketing`, `seo-autobot-crawlers-and-policy`, `seo-autobot-onsite`, `seo-autobot-research`.
 
+This repo holds 70 playbooks across those 8 category skills, plus the getting-started skill and the standalone audit skills.
+
 Paths are stable: a playbook is always at `<category>/references/<slug>.md`, and relative paths inside a playbook resolve against its own folder. Raw URLs follow the pattern:
 
 ```
