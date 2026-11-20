@@ -1,6 +1,6 @@
 ---
 name: seo-autobot-onsite
-description: "Use when a page or site is losing: lost-question diagnosis, page audits, titles, blog refresh, internal links, 30-day sprints, SEO roast, daily autopilot, or domain migration. Holds 11 AUTOBOT playbooks; Read references/<slug>.md."
+description: "Use when a page or site is losing: lost-question diagnosis, page audits, titles, blog refresh, internal links, 30-day sprints, SEO roast, daily autopilot, domain migration, or a scored six-dimension site audit. Holds 12 AUTOBOT playbooks; Read references/<slug>.md."
 metadata:
   version: "1.0.0"
   template: "ULTIMATE SEO/GEO/AEO/AIO AUTOBOT"
@@ -9,7 +9,7 @@ metadata:
 
 # On-site SEO: diagnosis, titles, refresh, internal links, sprints, teardowns, autopilot, migrations
 
-Part of ULTIMATE SEO/GEO/AEO/AIO AUTOBOT. This skill holds 11 playbooks. Each playbook is the complete original method (its own frontmatter included), with nothing summarized or dropped.
+Part of ULTIMATE SEO/GEO/AEO/AIO AUTOBOT. This skill holds 12 playbooks. Each playbook is the complete original method (its own frontmatter included), with nothing summarized or dropped.
 
 How to run one:
 1. Find the slug in the table below. Routes, workflows, and routines name playbooks by slug or by export name.
@@ -33,6 +33,7 @@ If loading this skill fails, Read this `SKILL.md` or `references/<slug>.md` dire
 | `domain-migration` | domain-migration | `references/domain-migration.md` | Use when the user is changing domains, rebranding, moving `blog.` to `/blog`, merging sites, renaming URL slugs in bulk, or asks how to migrate without losing SEO traffic. Helper files: `references/domain-migration/`. |
 | `websmith-crawl-index-sweep` | websmith-crawl-index-sweep | `references/websmith-crawl-index-sweep.md` | Use when the owner asks for a crawl/index/SEO-basics sweep, "can Google see my pages", canonicals, sitemap, soft 404s, redirect chains, orphan pages, or uses the "one subagent per group… before and after… Search Console" prompt. Runs WS-CRAWL-01..12 read-only with 3 parallel checkers, drafts one fix pack, and shows a before/after curl table. |
 | `live-discovery-scorecard` | live-discovery-scorecard | `references/live-discovery-scorecard.md` | Use when a storefront needs a dated, read-only scorecard of what search and answer engines actually get from the live host (titles, canonicals, JSON-LD, proof bindings, llms.txt, sitemap, robots, soft 404s, blank meta), kept as the single source of truth and re-dropped only when something changes. |
+| `six-dimension-site-audit` | six-dimension-site-audit | `references/six-dimension-site-audit.md` | Use when the operator wants a scored, evidence-backed audit of one production site across SEO technical, content, speed, accessibility, CRO, and schema, with P0/P1/P2 findings, measured-only 0-100 dimension scores, and a monthly diff. Never invent metrics. |
 
 
 ## Internal method resolver (merged library)
@@ -48,3 +49,4 @@ All following names mean Read the listed file through this category skill, not l
 - `seo-roast` → `../seo-autobot-onsite/references/seo-roast.md`.
 - `seo-title-optimization` → `../seo-autobot-onsite/references/seo-title-optimization.md`.
 - `websmith-crawl-index-sweep` → `../seo-autobot-onsite/references/websmith-crawl-index-sweep.md`.
+- `six-dimension-site-audit` → `../seo-autobot-onsite/references/six-dimension-site-audit.md`.

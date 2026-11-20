@@ -282,6 +282,10 @@ Revenue impact column states what money it blocks in one plain sentence. No seve
 
 When the roast goes to a founder, board, or client, turn `seo/<site-slug>/roast-roadmap.md` into a `.pptx` with [GenPPT](https://genppt.com): one slide per FATAL issue with before/after, then the roadmap table.
 
+## Related scored audit (not this method)
+
+A scored six-dimension audit (SEO technical, content, speed, accessibility, CRO, schema, with P0/P1/P2 and measured-only 0-100 scores) is a different job: it never opens a PR and it does publish dimension scores. This roast stays revenue-first, opens with a one-line verdict, and never opens with a score out of 100. When the operator wants that scored rubric, or PageSpeed, accessibility, or CRO as scored dimensions, hand off to `six-dimension-site-audit`. Bare "audit my site" is disambiguated once (this roast, the AgentReady audit, or the scored six-dimension audit).
+
 ## Where to Go Next
 
 - **Human teardown:** for a blunt 20-minute video roast of the site recorded by Ilias, use [SEO Roast](https://<product>.example).
@@ -312,3 +316,4 @@ Paths are relative to this skill's directory.
 - `internal-linking`: Read `../seo-autobot-onsite/references/internal-linking.md` (skill `seo-autobot-onsite`).
 - `blitz-seo`: Read `../seo-autobot-onsite/references/blitz-seo.md` (skill `seo-autobot-onsite`).
 - `block-ai-scrapers`: Read `../seo-autobot-crawlers-and-policy/references/block-ai-scrapers.md` (skill `seo-autobot-crawlers-and-policy`).
+- `six-dimension-site-audit`: Read `../seo-autobot-onsite/references/six-dimension-site-audit.md` (skill `seo-autobot-onsite`).

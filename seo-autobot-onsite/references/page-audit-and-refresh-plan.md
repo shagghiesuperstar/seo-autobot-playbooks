@@ -46,3 +46,13 @@ Inputs: the URL or list, the query and AI prompt it should win, its diagnosis ro
 Output: findings and ordered fix list, saved dated, logged as one change in the rerun tracker. Offer a refresh brief when it is a rewrite.
 
 Never change a live page, CMS entry, or robots file yourself. A page you cannot fetch gets named, not guessed at.
+
+
+## Related site-wide scored audit
+
+This method audits one URL (or a short list) and plans a refresh. A scored six-dimension audit of the whole site, with a crawl cap, dimension scores, and a monthly diff, is `six-dimension-site-audit`. When that site-wide audit names a weak page, come back here for the refresh plan. Image failures on the page still go through the checklist above.
+
+## Where referenced methods live (ULTIMATE SEO/GEO/AEO/AIO AUTOBOT)
+Paths are relative to this skill's directory.
+- `image-seo-checklist`: Read `../seo-autobot-content/references/image-seo-checklist.md` (skill `seo-autobot-content`).
+- `six-dimension-site-audit`: Read `../seo-autobot-onsite/references/six-dimension-site-audit.md` (skill `seo-autobot-onsite`).
