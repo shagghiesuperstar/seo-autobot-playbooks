@@ -8,7 +8,7 @@ State directory: `seo/`
 ## Artifacts
 | Path | What |
 |---|---|
-| `seo/<site-slug>/context.md` | site, repo, money pages, routing decisions, unknowns |
+| `seo/<site-slug>/context.md` | site, repo, money pages, routing decisions, unknowns, plus crawl_scope, page_cap, audit_priorities, and audit_data_sources when a six-dimension audit is in scope |
 | `seo/<site-slug>/log.md` | one dated line per run, newest last |
 | `seo/<site-slug>/backlog.md` | ranked, dated next actions |
 | `seo/<site-slug>/kb/brand-ssot.md` | product mechanics, pricing tiers, boundaries, banned public fields |
@@ -54,6 +54,12 @@ State directory: `seo/`
 | `seo/<site-slug>/ai-attribution.md` | provable, platform-claimed, and dark AI demand in separate tables |
 | `websmith/profiles/<domain>.md` | site profile for audits: production URLs, platform, agent tasks, approved claims, EXCEPTIONs, scanner approvals |
 | `websmith/runs/<domain>/<YYYY-MM-DD-HHMM>/` | one audit or re-check: raw evidence, `agentready-scorecard.{json,md}`, `results.json`, `REPORT.md`, `SUMMARY.md`, `fix-pack/` |
+| `seo/<site-slug>/audits/YYYY-MM-DD.md` | scored six-dimension site audit (scores, P0/P1/P2, unmeasured) |
+| `seo/<site-slug>/audits/YYYY-MM-DD-diff.md` | four-way diff: fixed / still open / new / regressions |
+| `seo/<site-slug>/audits/latest.md` | copy of the latest full six-dimension report |
+| `seo/<site-slug>/audits/baseline/` | small snapshots: titles, status, canonical, HTML hashes, short extracts |
+| `seo/<site-slug>/audits/evidence/YYYY-MM-DD/` | screenshots and tool links for that six-dimension run |
+| `seo/<site-slug>/audits/IMPROVEMENTS.md` | dated process notes from the weekly audit self-improve routine |
 | `seo/<site-slug>/video-social-surface.md` | video and social citations per tracked question, asset audit, and briefs |
 
 ## Approval gates (stop and get an explicit yes)

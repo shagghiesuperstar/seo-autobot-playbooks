@@ -1,4 +1,4 @@
-# Methods (69)
+# Methods (70)
 
 > Part of ULTIMATE SEO/GEO/AEO/AIO AUTOBOT. Generated from the Search Ops export (`methods`). Skill names are mapped to staged slugs.
 
@@ -74,3 +74,4 @@
 | `list-only-mcp-boundary` | List-only MCP audit boundary | Discovery is not permission to call a tool. | Only initialize and list/discover in audit mode. One tools/call needs explicit approval for that exact read-only call; scanner POSTs and public scores need a separate per-domain yes. |
 | `live-source-hierarchy` | Live source hierarchy and host currency | Production beats a branch, deploy stamp, docs, or another bot's report. | One canonical host of record; production response > analytics/logs > backend > repo main > docs. Re-drop only on change; wrong-host run is void. |
 | `proof-bind-audit` | Visible proof and schema bind | A proof link in schema is not proof the visible product points at the same document. | Fixed product sample records schema proof URL, visible proof URL, response, and MATCH/MISMATCH/NO_PROOF. Universal claims without a bind go to owner review, never copied into public claims. |
+| `measured-only-dimension-score` | Score only what you measured | A 0-100 dimension score uses measured checks only; unmeasured checks are excluded and listed, never guessed. | Each measured check is pass 1, warn 0.5, or fail 0. Fewer than three measured checks means the dimension is unscored. Overall is the average of scored dimensions only. Every finding has P0/P1/P2, a dimension, an evidence URL, and a fix. These scores stay separate from AgentReady, Websmith, and ARI-100. |

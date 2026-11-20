@@ -24,6 +24,9 @@
 
 | RT17 | live-discovery-delta | on demand; optional daily, operator-selected timezone | `live-discovery-scorecard` | Re-probe the host of record; save changed evidence and a ranked hitlist only on a real delta. No edits or outbound. | current site's discovery scorecard and one log line |
 
+| RT18 | monthly-six-dimension-re-audit | monthly (monthly, 10:00 on the 1st in the owner's timezone (example cron: 0 10 1 * *)) | `six-dimension-site-audit` (Read `../seo-autobot-onsite/references/six-dimension-site-audit.md`) | Once a month, re-run the scored six-dimension audit on the same host and crawl scope, write the report and a four-way diff, and update baseline snapshots. Chat the diff even when nothing material changed. | seo/<site-slug>/audits/YYYY-MM-DD.md, YYYY-MM-DD-diff.md, latest.md, baseline/, evidence/ |
+| RT19 | weekly-audit-self-improve | weekly (weekly, Monday morning in the owner's timezone (example cron: 0 9 * * 1)) | `six-dimension-site-audit` (Read `../seo-autobot-onsite/references/six-dimension-site-audit.md`) | Once a week, quietly append one concrete process improvement to how the six-dimension audit is run or reported. No full audit on this wake unless a URL is already saved and you are only tightening process docs. Stay silent unless a human decision is required. | seo/<site-slug>/audits/IMPROVEMENTS.md |
+
 ## RT7 Content ideas digest prompt (enabledOnImport=False)
 
 Run once a week on the morning the user picked, in the timezone saved in memory. Compute the cron from that timezone and never assume Pacific or UTC. Read the ideas board first so you never repeat an idea that is already queued, briefed, or published. Pull new candidates from the keyword source in memory, from Search Console queries getting impressions with no page aimed at them, from losing rows in the question map and diagnosis log marked missing page, and from what the top results in their space published this week. Post 3 to 5 new ideas, no more. One line each: the page idea, the buyer decision it serves, who it is for, the terms and AI prompt it covers, and why now. Prefer refreshing an existing page over a new one when a page already aims at the question. Name the top pick and offer to write the brief in the same message. Write the new rows to the ideas board. Never invent a search volume, a difficulty score, or a position. A week with nothing new gets one line saying the board is current and no list. Never publish, post, or send anything from this run.
@@ -70,3 +73,22 @@ Every routine prompt: compute cron from the operator's saved timezone; never pub
 
 ## RT17 Live discovery delta prompt (enabledOnImport=False)
 Proposal only: start PAUSED, with no schedule until the operator explicitly selects one and a timezone. Load the active site's context and last discovery scorecard, use the same canonical host and fixed sample, run `live-discovery-scorecard` read-only. Save changed cells and a ranked hitlist only if there is a real delta; otherwise one dated log line. Failed requests are UNTESTED with the error. No retries into a mutating flow, no new paid trial, no source-bot schedule changes, no outbound. Report in the operator's timezone with its label.
+
+
+## RT18 Monthly six-dimension re-audit prompt (enabledOnImport=False)
+Proposal only: start PAUSED, with no schedule until the operator explicitly selects one and a timezone is already saved. Compute the cron from that timezone (example: 10:00 on the 1st). Load the active site's `seo/<site-slug>/context.md`. If there is no production URL, stay quiet; never invent a site and never fake Lighthouse, PageSpeed, or lab numbers.
+
+If the URL is set: re-run `six-dimension-site-audit` with the same crawl_scope (default: homepage, nav-linked top pages, one example of each public template, cap about 30 unless context says otherwise). Read-only: GET and HEAD only, at most 1 request per second per host, public pages only, no live-site change. Cover all six dimensions: SEO technical, content, speed, accessibility, CRO, schema. Unmeasured checks are listed and excluded from scores. Outside PageSpeed or schema-validator URL fetches still need a per-domain yes already on file.
+
+Compare to `seo/<site-slug>/audits/baseline/` and the last report. Write `seo/<site-slug>/audits/YYYY-MM-DD.md`, `seo/<site-slug>/audits/YYYY-MM-DD-diff.md`, and copy the full report to `seo/<site-slug>/audits/latest.md`. Diff sections: fixed / still open / new / regressions. Do not claim a fix without evidence. Update baseline snapshots (titles, small HTML hashes, short extracts — keep them small). Put screenshots and tool links under `seo/<site-slug>/audits/evidence/YYYY-MM-DD/`.
+
+Chat the diff even if there is no material change (monthly always reports). Never invent metrics, traffic, rankings, or conversion rates. Do not change the live site. Do not open a PR from this routine.
+
+## RT19 Weekly audit self-improve prompt (enabledOnImport=False)
+Proposal only: start PAUSED, with no schedule until the operator explicitly selects one and a timezone is already saved. Compute the cron from that timezone (example: Monday 09:00). Stay inside this method's job (how the six-dimension audit is run and reported). Do not expand this wake into outreach, publishing, or a full audit.
+
+Read `seo/<site-slug>/context.md`, `seo/<site-slug>/audits/IMPROVEMENTS.md`, and any recent files under `seo/<site-slug>/audits/` if they exist.
+
+Do ONE concrete improvement to how you audit or report (a checklist note, an evidence convention, a scoring rubric line, a crawl-scope reminder, or a gap you hit on a real audit). Append a short dated entry to `seo/<site-slug>/audits/IMPROVEMENTS.md`. Do not invent a site or lab metrics. Do not run a full audit on this wake unless context already has a site URL and you are only tightening process docs.
+
+Stay silent after logging the improvement unless a human decision is required (for example still no site URL after they asked for this audit, or a broken monthly routine). No filler "all good" ping.
